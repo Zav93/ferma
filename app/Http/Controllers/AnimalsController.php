@@ -19,8 +19,7 @@ class AnimalsController extends Controller
 			->take(10)
 			->get();
 
-    	var_dump($animals);
-        return view('animals.index',[]);
+        return view('animals.index',[$animals]);
     }
 
     /**

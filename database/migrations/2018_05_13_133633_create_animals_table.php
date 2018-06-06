@@ -17,15 +17,18 @@ class CreateAnimalsTable extends Migration
             $table->increments('id');
             $table->integer('type_id');
             $table->string('measurement');
-            $table->integer('total_count');
-            $table->integer('bought_count');
+            $table->boolean('is_bought');
+            $table->date('bought_date');
             $table->bigInteger('bought_unit_price');
-            $table->integer('sold_count');
+            $table->boolean('is_sold');
+            $table->date('sold_date');
             $table->decimal('sold_price');
             $table->decimal('sold_weight');
-            $table->integer('death_count');
-            $table->integer('birth_count');
+            $table->integer('is_death');
+            $table->date('death_date');
+            $table->boolean('birth');
             $table->bigInteger('profit');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
