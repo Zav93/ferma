@@ -31,24 +31,41 @@
 							</label>
 						</div>
 						<button type="button" class="btn btn-primary btn-sm">Որոնում</button>
+						<button type="button" class="btn btn-primary btn-sm">Ավելացնել</button>
 					</div>
-					<table class="table">
+					<table class="table table-striped">
+						<!--Table head-->
 						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">First</th>
-								<th scope="col">Last</th>
-								<th scope="col">Handle</th>
-							</tr>
-						</thead>
-						<tbody>
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
+							<th>#</th>
+							<th>Name</th>
+							<th>Surname</th>
+							<th>Country</th>
+							<th>City</th>
+							<th>Position</th>
+							<th>Actions</th>
 						</tr>
+						</thead>
+						<!--Table head-->
+						<!--Table body-->
+						<tbody>
+						@foreach($animals as $animal)
+							<tr>
+								<th scope="row">1</th>
+								<td>Kate</td>
+								<td>Moss</td>
+								<td>USA</td>
+								<td>New York City</td>
+								<td>Web Designer</td>
+								<td>
+									<a class="detail-icon padding-3" href="animals/"> <i class="glyphicon glyphicon-plus icon-plus"></i> </a>
+									<a class="edit padding-3" href="#" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
+									<a class="remove padding-3" href="#" title="Remove"><i class="glyphicon glyphicon-remove"></i></a>
+								</td>
+							</tr>
+						@endforeach
 						</tbody>
+						<!--Table body-->
 					</table>
 				</div>
 			</div>

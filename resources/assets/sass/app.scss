@@ -8,6 +8,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import "glyphicons";
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -20,3 +22,8 @@
   display: inline-block;
   padding: 0 30px;
 }
+.padding-3 {
+  padding:0 3px;
+}
+
+
