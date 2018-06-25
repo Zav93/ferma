@@ -26,7 +26,7 @@ class CreateAnimalsTable extends Migration
             $table->decimal('sold_weight');
             $table->integer('is_death');
             $table->date('death_date');
-            $table->boolean('birth');
+            $table->boolean('birth_date');
             $table->bigInteger('profit');
             $table->boolean('active');
             $table->timestamps();

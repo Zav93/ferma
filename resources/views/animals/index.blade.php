@@ -38,29 +38,31 @@
 						<thead>
 						<tr>
 							<th>#</th>
-							<th>Name</th>
-							<th>Surname</th>
-							<th>Country</th>
-							<th>City</th>
+							<th>Տիպ</th>
+							<th>չ/մ</th>
+							<th>Արժեքը</th>
+							<th>Վաճառվածի </th>
 							<th>Position</th>
+							<th>Actions</th>
 							<th>Actions</th>
 						</tr>
 						</thead>
 						<!--Table head-->
 						<!--Table body-->
 						<tbody>
-						@foreach($animals as $animal)
+						@foreach($animals as $key => $animal)
 							<tr>
-								<th scope="row">1</th>
-								<td>Kate</td>
-								<td>Moss</td>
-								<td>USA</td>
-								<td>New York City</td>
-								<td>Web Designer</td>
+								<th scope="row">{{ $key + 1 }}</th>
+								<td>{{ $animal->type->name }}</td>
+								<td>{{ $animal->measurement }}</td>
+								<td>{{ $animal->bought_unit_price }}</td>
+								<td>{{ $animal->sold_price }}</td>
+								<td>{{ $animal->sold_weight }}</td>
+								<td>{{ $animal->birth_date }}</td>
 								<td>
-									<a class="detail-icon padding-3" href="animals/"> <i class="glyphicon glyphicon-plus icon-plus"></i> </a>
-									<a class="edit padding-3" href="#" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
-									<a class="remove padding-3" href="#" title="Remove"><i class="glyphicon glyphicon-remove"></i></a>
+									<a class="detail-icon padding-3" href="animals/create"> <i class="glyphicon glyphicon-plus icon-plus"></i></a>
+									<a class="edit padding-3" href="animals/edit" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
+									<a class="remove padding-3" href="animals/delete" title="Remove"><i class="glyphicon glyphicon-remove"></i></a>
 								</td>
 							</tr>
 						@endforeach

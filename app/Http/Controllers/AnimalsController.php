@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Animals;
+use App\models\Animals;
 use Illuminate\Http\Request;
 
 class AnimalsController extends Controller
@@ -19,7 +19,7 @@ class AnimalsController extends Controller
 			->take(10)
 			->get();
 
-        return view('animals.index',[$animals]);
+        return view('animals.index', ['animals' => $animals]);
     }
 
     /**
@@ -29,7 +29,7 @@ class AnimalsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
