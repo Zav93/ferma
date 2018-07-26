@@ -16,9 +16,12 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <script src="{{asset('js/jquery-3.3.1.min.js')}}" defer></script>
+    <script src="{{asset('js/jquery-ui.js')}}" defer></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -34,7 +37,27 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="/">Գլխավոր <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ url('animals') }}">ԾԱՎԱԼԱԹԵՐԹ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ url('transaction') }}">ՎԱԿՑԻՆԱՑՄԱՆ ՊԼԱՆ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ url('transaction') }}">ԾՆԵԼԻՈՒԹՅՈՒՆ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ url('transaction') }}">ՏԵՂԵԿՈՒԹՅՈՒՆՆԵՐ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

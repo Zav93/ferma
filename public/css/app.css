@@ -11510,3 +11510,25 @@ a.text-dark:focus {
   padding: 0 3px;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.custom-form {
+  display: inline-block;
+}
+
+.custom-edit-btn {
+  border: none;
+  background: none;
+  color: #007bff;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.margin-10 {
+  margin: 0 0 10px 10px;
+}
+

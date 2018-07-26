@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\animals\StoreRequest;
+use App\Http\Requests\animals\UpdateRequest;
 use App\models\Animals;
-use Illuminate\Http\Request;
+use App\models\AnimalTypes;
+use App\models\Measurement;
 
 class AnimalsController extends Controller
 {
@@ -14,12 +17,15 @@ class AnimalsController extends Controller
      */
     public function index()
     {
-    	$animals = Animals::where('active', 1)
-			->orderBy('id', 'desc')
+    	$animals = Animals::orderBy('id', 'desc')
 			->take(10)
 			->get();
 
-        return view('animals.index', ['animals' => $animals]);
+        return view('animals.index', [
+        	'animals' => $animals,
+			'animalTypes' => AnimalTypes::all(),
+			'measurements' => Measurement::all()
+		]);
     }
 
     /**
@@ -29,7 +35,10 @@ class AnimalsController extends Controller
      */
     public function create()
     {
-
+		return view('animals.create', [
+			'animalTypes' => AnimalTypes::all(),
+			'measurements' => Measurement::all()
+		]);
     }
 
     /**
@@ -38,9 +47,12 @@ class AnimalsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //
+		$animals = new Animals();
+		$animals->create($request->all());
+
+		return redirect('animals');
     }
 
     /**
@@ -62,7 +74,11 @@ class AnimalsController extends Controller
      */
     public function edit($id)
     {
-        //
+		return view('animals.edit', [
+			'animal' => Animals::find($id),
+			'animalTypes' => AnimalTypes::all(),
+			'measurements' => Measurement::all()
+		]);
     }
 
     /**
@@ -72,9 +88,11 @@ class AnimalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, Animals $animal)
     {
-        //
+		$animal->update($request->all());
+
+		return redirect('animals');
     }
 
     /**
@@ -83,8 +101,10 @@ class AnimalsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Animals $animal)
     {
-        //
+        $animal->delete();
+
+        return back();
     }
 }

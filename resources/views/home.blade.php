@@ -12,14 +12,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div align="center">
-                        <button type="button" class="btn btn-primary btn-lg">ԾՆԵԼԻՈՒԹՅՈՒՆ</button>
-                        <button type="button" class="btn btn-primary btn-lg">ՎԱԿՑԻՆԱՑՄԱՆ ՊԼԱՆ</button>
-                        <a href='animals'>
-                            <button type="button" class="btn btn-primary btn-lg">ԾԱՎԱԼԱԹԵՐԹ</button>
-                        </a>
-                        <button type="button" class="btn btn-primary btn-lg">ՏԵՂԵԿՈՒԹՅՈՒՆՆԵՐ</button>
-                    </div>
+
                 </div>
             </div>
         </div>

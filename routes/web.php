@@ -18,6 +18,10 @@
 
 
 Auth::routes();
-
 Route::get('/', 'HomeController@index')->name('home');
-Route::resource('/animals', 'AnimalsController');
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::resource('/animals', 'AnimalsController');
+});
+
+
