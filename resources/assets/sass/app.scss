@@ -8,7 +8,38 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import "glyphicons";
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+.custom-select {
+  width: auto;
+  margin-right: 30px;
+}
+.form-check {
+  display: inline-block;
+  padding: 0 30px;
+}
+.padding-3 {
+  padding:0 3px;
+}
+.clickable {
+  cursor: pointer;
+}
+.custom-form {
+  display: inline-block;
+}
+.custom-edit-btn {
+  border: none;
+  background: none;
+  color: #007bff;
+}
+.padding-10 {
+  padding: 10px;
+}
+.margin-10 {
+  margin: 0 0 10px 10px;
+}
+

@@ -16,16 +16,15 @@ class CreateAnimalsTable extends Migration
         Schema::create('animals', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('type_id');
-            $table->string('measurement');
-            $table->integer('total_count');
-            $table->integer('bought_count');
-            $table->bigInteger('bought_unit_price');
-            $table->integer('sold_count');
-            $table->decimal('sold_price');
-            $table->decimal('sold_weight');
-            $table->integer('death_count');
-            $table->integer('birth_count');
-            $table->bigInteger('profit');
+            $table->integer('measurement_id');
+            $table->integer('count');
+            $table->date('bought_date')->nullable();
+            $table->bigInteger('bought_price')->nullable();
+            $table->date('sold_date')->nullable();
+            $table->decimal('sold_price')->nullable();
+            $table->decimal('sold_weight')->nullable();
+            $table->date('death_date')->nullable();
+            $table->date('birth_date')->nullable();
             $table->timestamps();
         });
     }
