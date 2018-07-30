@@ -36,7 +36,11 @@
 							<input class="form-control" id="boughtDate" name="bought_date" value=>
 						</div>
 						<div class="form-group">
-							<label for="name">Գն. արժեքը</label>
+							<label for="name">Գն. քաշը</label>
+							<input class="form-control" id="boughtDate" name="bought_date" value=>
+						</div>
+						<div class="form-group">
+							<label for="name">Գն. հատի արժեքը</label>
 							<input class="form-control" id="boughtPrice" name="bought_price" value=>
 						</div>
 						<div class="form-group">

@@ -19,12 +19,14 @@ class CreateAnimalsTable extends Migration
             $table->integer('measurement_id');
             $table->integer('count');
             $table->date('bought_date')->nullable();
+            $table->date('bought_weight')->nullable();
             $table->bigInteger('bought_price')->nullable();
             $table->date('sold_date')->nullable();
             $table->decimal('sold_price')->nullable();
             $table->decimal('sold_weight')->nullable();
             $table->date('death_date')->nullable();
             $table->date('birth_date')->nullable();
+            $table->decimal('unit_price')->nullable();
             $table->timestamps();
         });
     }

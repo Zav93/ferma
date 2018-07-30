@@ -22,6 +22,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('/animals', 'AnimalsController');
+	Route::post('search', 'SearchController@search');
 });
 
 
